@@ -30,8 +30,8 @@
             filePath = "kiwi/ContentView.swift"
             startingColumnNumber = "29"
             endingColumnNumber = "29"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "init(_intensity:_sharpness:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "kiwi/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "getHapticPixelOverScrubArea(point:)"
             landmarkType = "7">
             <Locations>

@@ -9,9 +9,6 @@ import SwiftUI
 import SwiftUITrackableScrollView
 import NetUtils
 
-extension CGRect {
-    var center: CGPoint { .init(x: midX, y: midY) }
-}
 
 struct HapticPixelView : View {
     var width: CGFloat
@@ -43,7 +40,7 @@ class HapticPixel : Identifiable {
         sharpness = _sharpness
     }
     
-    func getCoords(geo: GeometryProxy) -> CGPoint {
+    func getCoords(geo: SwiftUI.GeometryProxy) -> CGPoint {
         globalPos = geo.frame(in: .global)
         let width = geo.size.width
         let height = CGFloat(intensity * 500)
@@ -54,14 +51,16 @@ class HapticPixel : Identifiable {
 
 class HapticPixelContainer : ObservableObject {
     @Published var pixels = [HapticPixel]()
-    var globalGeo: GeometryProxy!
+
 
     func getHapticPixelOverScrubArea(point: CGPoint) -> HapticPixel? {
         var retPixel: HapticPixel?
         pixels.forEach{ pixel in
             if let pos = pixel.globalPos{
                 if (pos.contains(point))
-                    { retPixel = pixel }
+                {
+                    retPixel = pixel
+                }
             } else {
                 print("pixel does not have global position")
             }
@@ -74,13 +73,15 @@ struct HapticPixelScrubber : View {
     @State private var haptics = Haptics()
     private var pixelSpacing: CGFloat = 1
     @ObservedObject var pixels = HapticPixelContainer()
+    private var numPixels = 4
     
+    @State private var scrubbing: Bool = false
     @State private var scrubPlayer = ContinuousHapticPlayer()
     var scrub: some Gesture {
         DragGesture()
             .onChanged{ value in
                 // if we just started scrubbing, start a continuous event
-                if let pixel = pixels.getHapticPixelOverScrubArea(point: pixels.globalGeo.frame(in: .local).center){
+                if let pixel = pixels.getHapticPixelOverScrubArea(point: value.location){
                     if (scrubPlayer.player == nil) {
                         scrubPlayer.start(with: haptics, intensity: pixel.intensity,
                                           sharpness: pixel.sharpness)
@@ -98,43 +99,28 @@ struct HapticPixelScrubber : View {
             }
     }
     
-    func constructHapticPixelView(for pixel: HapticPixel, with geo: GeometryProxy,
-                                  globalGeo: GeometryProxy) -> some View {
-        pixels.globalGeo = globalGeo
+    func constructHapticPixelView(for pixel: HapticPixel, with geo: GeometryProxy) -> some View {
         let coords = pixel.getCoords(geo: geo)
-        return HapticPixelView(width: coords.x ,
+        return HapticPixelView(width: coords.x,
                               height: coords.y)
+                              .gesture(scrub)
     }
     
     var body : some View {
-        GeometryReader{ globalGeo in
-            ScrollViewReader { scrollProxy in
-                ScrollView(.horizontal) {
-                    LazyHStack(spacing: pixelSpacing) {
-                        ForEach(pixels.pixels) { _pixel in
-                            GeometryReader  { geo in
-                                constructHapticPixelView(for: _pixel, with: geo, globalGeo: globalGeo)
-                            }
-                        }
-                    }
+        
+        HStack(spacing: pixelSpacing) {
+            ForEach(pixels.pixels) { _pixel in
+                GeometryReader  { geo in
+                    constructHapticPixelView(for: _pixel, with: geo)
                 }
-                .simultaneousGesture(scrub)
-                .onAppear(perform: {
-                    haptics.prepare()
-                    (0...256).forEach({idx in
-                        pixels.pixels.append(HapticPixel(_intensity: Float.random(in: 0.01...1.0),
-                                                         _sharpness: 1.0))
-                    })
-                }).padding()
             }
-            Circle()
-//                .stroke(lineWidth: 2)
-//                .fill(Color("yellow"))
-                .cornerRadius(5)
-                .foregroundColor(.yellow)
-                .position(globalGeo.frame(in: .local).center)
-                .frame(width: 20, height: 20)
-        }
+        }.onAppear(perform: {
+            haptics.prepare()
+            (0...128).forEach({idx in
+                pixels.pixels.append(HapticPixel(_intensity: Float.random(in: 0.5...1.0),
+                                                 _sharpness: 1.0))
+            })
+        }).padding()
     }
 }
 
