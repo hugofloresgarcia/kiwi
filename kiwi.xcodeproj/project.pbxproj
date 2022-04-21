@@ -17,6 +17,19 @@
 		9A727E6528030B2600172FF9 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 9A727E6428030B2600172FF9 /* Collections */; };
 		9A727E6728030B2600172FF9 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 9A727E6628030B2600172FF9 /* DequeModule */; };
 		9A727E6928030B2600172FF9 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 9A727E6828030B2600172FF9 /* OrderedCollections */; };
+		9A789109280F4232000C9CA4 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FA280F4232000C9CA4 /* Argument.swift */; };
+		9A78910A280F4232000C9CA4 /* AddressPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FB280F4232000C9CA4 /* AddressPattern.swift */; };
+		9A78910B280F4232000C9CA4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FC280F4232000C9CA4 /* Message.swift */; };
+		9A78910C280F4232000C9CA4 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FD280F4232000C9CA4 /* Method.swift */; };
+		9A78910D280F4232000C9CA4 /* AddressSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FE280F4232000C9CA4 /* AddressSpace.swift */; };
+		9A78910E280F4232000C9CA4 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7890FF280F4232000C9CA4 /* Bundle.swift */; };
+		9A78910F280F4232000C9CA4 /* SLIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789101280F4232000C9CA4 /* SLIP.swift */; };
+		9A789110280F4232000C9CA4 /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789102280F4232000C9CA4 /* Multicast.swift */; };
+		9A789111280F4232000C9CA4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789103280F4232000C9CA4 /* Server.swift */; };
+		9A789112280F4232000C9CA4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789104280F4232000C9CA4 /* Client.swift */; };
+		9A789113280F4232000C9CA4 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789105280F4232000C9CA4 /* Browser.swift */; };
+		9A789114280F4232000C9CA4 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789107280F4232000C9CA4 /* Logging.swift */; };
+		9A789115280F4232000C9CA4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A789108280F4232000C9CA4 /* Util.swift */; };
 		9AA0089F27C68AB100359374 /* OSCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0089E27C68AB100359374 /* OSCView.swift */; };
 		9AA008A227C6B8DA00359374 /* GetIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA008A127C6B8DA00359374 /* GetIP.swift */; };
 		9AA008A527C6C91D00359374 /* SwiftUIOSC in Frameworks */ = {isa = PBXBuildFile; productRef = 9AA008A427C6C91D00359374 /* SwiftUIOSC */; };
@@ -60,6 +73,20 @@
 		9A36E11427A86ED800CF9989 /* kiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiwiUITests.swift; sourceTree = "<group>"; };
 		9A36E11627A86ED800CF9989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A36E12227A8837900CF9989 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		9A7890F6280F41F2000C9CA4 /* OSCine-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "OSCine-main"; path = "../../../OSCine-main"; sourceTree = "<group>"; };
+		9A7890FA280F4232000C9CA4 /* Argument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
+		9A7890FB280F4232000C9CA4 /* AddressPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPattern.swift; sourceTree = "<group>"; };
+		9A7890FC280F4232000C9CA4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9A7890FD280F4232000C9CA4 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		9A7890FE280F4232000C9CA4 /* AddressSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSpace.swift; sourceTree = "<group>"; };
+		9A7890FF280F4232000C9CA4 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		9A789101280F4232000C9CA4 /* SLIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLIP.swift; sourceTree = "<group>"; };
+		9A789102280F4232000C9CA4 /* Multicast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Multicast.swift; sourceTree = "<group>"; };
+		9A789103280F4232000C9CA4 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		9A789104280F4232000C9CA4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		9A789105280F4232000C9CA4 /* Browser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		9A789107280F4232000C9CA4 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		9A789108280F4232000C9CA4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9AA0089E27C68AB100359374 /* OSCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCView.swift; sourceTree = "<group>"; };
 		9AA008A127C6B8DA00359374 /* GetIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIP.swift; sourceTree = "<group>"; };
 		9AA008A727C6C97300359374 /* SwiftUIOSC */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIOSC; path = ../../../SwiftUIOSC; sourceTree = "<group>"; };
@@ -125,6 +152,7 @@
 		9A36E0F627A86ED600CF9989 /* kiwi */ = {
 			isa = PBXGroup;
 			children = (
+				9A7890F7280F4232000C9CA4 /* Sources */,
 				9AA008A027C6B8B800359374 /* Utils */,
 				9A5F598627BF6D9D008D3706 /* Resources */,
 				9ADE8DD027BEF51500D52130 /* Models */,
@@ -171,6 +199,58 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9A7890F7280F4232000C9CA4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9A7890F8280F4232000C9CA4 /* OSCine */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9A7890F8280F4232000C9CA4 /* OSCine */ = {
+			isa = PBXGroup;
+			children = (
+				9A7890F9280F4232000C9CA4 /* OSC */,
+				9A789100280F4232000C9CA4 /* Network */,
+				9A789106280F4232000C9CA4 /* Support */,
+			);
+			path = OSCine;
+			sourceTree = "<group>";
+		};
+		9A7890F9280F4232000C9CA4 /* OSC */ = {
+			isa = PBXGroup;
+			children = (
+				9A7890FA280F4232000C9CA4 /* Argument.swift */,
+				9A7890FB280F4232000C9CA4 /* AddressPattern.swift */,
+				9A7890FC280F4232000C9CA4 /* Message.swift */,
+				9A7890FD280F4232000C9CA4 /* Method.swift */,
+				9A7890FE280F4232000C9CA4 /* AddressSpace.swift */,
+				9A7890FF280F4232000C9CA4 /* Bundle.swift */,
+			);
+			path = OSC;
+			sourceTree = "<group>";
+		};
+		9A789100280F4232000C9CA4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9A789101280F4232000C9CA4 /* SLIP.swift */,
+				9A789102280F4232000C9CA4 /* Multicast.swift */,
+				9A789103280F4232000C9CA4 /* Server.swift */,
+				9A789104280F4232000C9CA4 /* Client.swift */,
+				9A789105280F4232000C9CA4 /* Browser.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9A789106280F4232000C9CA4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9A789107280F4232000C9CA4 /* Logging.swift */,
+				9A789108280F4232000C9CA4 /* Util.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		9AA008A027C6B8B800359374 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA008A727C6C97300359374 /* SwiftUIOSC */,
+				9A7890F6280F41F2000C9CA4 /* OSCine-main */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -350,17 +431,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A78910A280F4232000C9CA4 /* AddressPattern.swift in Sources */,
+				9A789114280F4232000C9CA4 /* Logging.swift in Sources */,
 				9AA0089F27C68AB100359374 /* OSCView.swift in Sources */,
 				9AA008A927C8130900359374 /* Clamp.swift in Sources */,
 				9A36E12327A8837900CF9989 /* Haptics.swift in Sources */,
 				9AA008A227C6B8DA00359374 /* GetIP.swift in Sources */,
+				9A78910C280F4232000C9CA4 /* Method.swift in Sources */,
+				9A789109280F4232000C9CA4 /* Argument.swift in Sources */,
 				9ADE8DCC27BEF33A00D52130 /* AudioHapticPixelData.swift in Sources */,
+				9A789113280F4232000C9CA4 /* Browser.swift in Sources */,
+				9A789112280F4232000C9CA4 /* Client.swift in Sources */,
 				9A36E0FA27A86ED700CF9989 /* ContentView.swift in Sources */,
+				9A789110280F4232000C9CA4 /* Multicast.swift in Sources */,
+				9A789111280F4232000C9CA4 /* Server.swift in Sources */,
 				9A36E0F827A86ED700CF9989 /* kiwiApp.swift in Sources */,
 				9ADE8DC627BEE5F500D52130 /* AudioHapticPixel.swift in Sources */,
+				9A78910F280F4232000C9CA4 /* SLIP.swift in Sources */,
 				9AA027A827FC998100177405 /* Bonjour.swift in Sources */,
 				9ADE8DC827BEE82300D52130 /* AudioHapticPixelView.swift in Sources */,
+				9A789115280F4232000C9CA4 /* Util.swift in Sources */,
+				9A78910E280F4232000C9CA4 /* Bundle.swift in Sources */,
 				9ADE8DCA27BEF22500D52130 /* AudioHapticPixelList.swift in Sources */,
+				9A78910B280F4232000C9CA4 /* Message.swift in Sources */,
+				9A78910D280F4232000C9CA4 /* AddressSpace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

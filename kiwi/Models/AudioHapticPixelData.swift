@@ -29,6 +29,7 @@ final class PixelData: ObservableObject {
     func addPixels(_ newPixels: inout [AudioHapticPixel]) {
         for pixel in newPixels {
             self.pixels[pixel.id] = pixel
+            self.pixels[pixel.id]!.value = sqrt(pixel.value * 4)
         }
         
         self.pixels.sort() { pix1, pix2 in

@@ -6,6 +6,8 @@
 	<array>
 		<string>_test._tcp</string>
 		<string>_airplay._tcp</string>
+		<string>_airplay._udp</string>
+		<string>_osc._udp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Use this to pair iOS to a reaper controller</string>

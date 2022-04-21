@@ -101,7 +101,7 @@ struct AudioHapticPixelListView : View {
                                                 updateHapticPlayer(activate: pixel)
                                                 // send the update the cursor on the controller
                                                 // only if it hasn't been sent yet
-                                                if (cursorMsg != pixel.id){
+                                                if (cursorMsg != pixel.id && pixelData.pixels.count > 0){
                                                     cursorMsg = pixel.id
                                                 }
                                             }
@@ -117,8 +117,10 @@ struct AudioHapticPixelListView : View {
                     .accessibility(addTraits: .allowsDirectInteraction)
                     .onAppear {
                         osc.receive(on: "/cursor") { values in
-                            let pos: Int = .convert(values: values)
-                            proxy.scrollTo(pos)
+                            DispatchQueue.main.async {
+                                let pos: Int = .convert(values: values)
+                                proxy.scrollTo(pos)
+                            }
                         }
                     }
                 }
@@ -131,8 +133,6 @@ struct AudioHapticPixelListView : View {
                     .fill(.red)
                     .frame(width: 25)
             }
-            
-            
         }
     }
 }
